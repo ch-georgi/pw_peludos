@@ -18,3 +18,7 @@
   left: 0;
   min-height: 700px;
 }
+
+.info-grupo, .sobre-nosotros{
+  padding-top: 50px;
+}
