@@ -22,3 +22,45 @@
 .info-grupo, .sobre-nosotros{
   padding-top: 50px;
 }
+
+.overlay-carousel{
+    background-image:
+      linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.73));
+    width: 100%;
+    background-size: cover;
+    color: white;
+    left: 0;
+    bottom: 0;
+}
+
+.navbar-brand:hover{
+  color: white;
+}
+
+.miembros-info{
+  text-align: center;
+}
+
+.miembros-introduccion{
+  text-align: justify;
+  min-height: 150px;
+}
+
+.miembros-info a{
+  bottom:0;
+}
+
+.info-grupo{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#id-info-grupo{
+  width:100%;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(251, 109, 72, 1));
+  
+}
+
+.avatar-miembros{
+  border: #fb6d48 solid 5px;
+}
