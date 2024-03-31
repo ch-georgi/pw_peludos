@@ -21,64 +21,96 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/buscamascotas.css" />
     <title>Ayuda a un peludo</title>
   </head>
   <body>
     <!--Menu-->
     <header>
-    <nav class="navbar navbar-expand-lg" id="menu-principal">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><i class="fa-solid fa-paw"></i> Ayuda a un peludo</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Peludos en adopción
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Perros</a></li>
-                <li><a class="dropdown-item" href="./gatos.html">Gatos</a></li>
-                <li>
-                  <a class="dropdown-item" href="./otros.html">Otros</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-lg" id="menu-principal">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><i class="fa-solid fa-paw"></i> Ayuda a un peludo</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Peludos en adopción
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Perros</a></li>
+                  <li><a class="dropdown-item" href="./gatos.html">Gatos</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./otros.html">Otros</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
+    
+    <!--Titulo-->
     <div class="container">
       <h1 class="text-center"><i class="fa-solid fa-dog"></i> PERROS EN ADOPCIÓN</h1>
-      <div class="container">
-        <p class="h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="text-center">
+        <p class="h3">Valientes, leales, juguetones y muy peludos... ¡Aquí encontrarás a tu próximo leal compañero!</p>
       </div>
     </div>
+
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="../assets/imgs/otto.jpg" height="100"></td>
+                <td>Otto</td>
+                <td>Encantador perro mayor en busca de un hogar amoroso. Con su sabiduría y tranquilidad, este dulce compañero ofrece lealtad incondicional y años de afecto sincero. Listo para ser el mejor amigo de alguien y compartir momentos especiales juntos.</td>
+              </tr>
+              <tr>
+                <td><img src="../assets/imgs/shiva.jpg" height="100"></td>
+                <td>Shiva</td>
+                <td>Adorable cachorro en busca de un hogar lleno de amor y aventuras. Con su energía contagiosa y tierna inocencia, este pequeño peludo promete llenar tu vida de alegría y diversión. ¿Estás listo para darle un lugar en tu corazón?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
