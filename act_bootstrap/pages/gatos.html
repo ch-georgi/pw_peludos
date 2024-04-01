@@ -45,7 +45,7 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Ayuda a un peludo</title>
   </head>
-  <body>
+  <body class="orange-gradient">
     <!--Menu-->
     <header>
       <nav class="navbar navbar-expand-lg" id="menu-principal">
@@ -83,10 +83,10 @@
                   Peludos en adopción
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./perros.html">Perros</a></li>
                   <li>
-                    <a class="dropdown-item" href="./perros.html">Perros</a>
+                    <a class="dropdown-item" href="#">Gatos</a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Gatos</a></li>
                   <li>
                     <a class="dropdown-item" href="./otros.html">Otros</a>
                   </li>
@@ -97,21 +97,56 @@
         </div>
       </nav>
     </header>
+    
+    <!--Titulo-->
     <div class="container">
-      <h1 class="text-center">
-        <i class="fa-solid fa-cat"></i> GATOS EN ADOPCIÓN
-      </h1>
-      <div class="container">
-        <p class="h3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+      <h1 class="text-center"><i class="fa-solid fa-cat"></i> GATOS EN ADOPCIÓN</h1>
+      <div class="text-center">
+        <p class="h3">Elegantes, carismáticos, curiosos e independientes... ¡Aquí encontrarás a tu próximo amigo!</p>
       </div>
     </div>
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <!--TODO: Move dog banner to assets folder-->
+        <div class="col-2"><img src="../assets/imgs/CatBanner01.png" width="100%"></div>
+        <div class="col-8">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="./mascotas/gatos/patitas.html"><img src="../assets/imgs/patitas.jpg" height="100"></a></td>
+                <td>Patitas</td>
+                <td>Tierno gatito en busca de un hogar amoroso. Con su dulce mirada y suave pelaje, este pequeño travieso promete llenar tu vida de alegría y ternura. ¿Estás listo para darle un lugar en tu corazón y ser su compañero para siempre?</td>
+              </tr>
+              <tr>
+                <td><a href="./mascotas/gatos/archibalddemontgato.html"><img src="../assets/imgs/ArchibaldDeMontgato.jpg" height="100"></a></td>
+                <td>Archibald de Montgato</td>
+                <td>Exquisito gato aristocrático en busca de un hogar a la altura de su distinción. Con su porte regio y mirada serena, este felino encantador ofrece compañía refinada y elegancia sin igual. ¿Estás preparado para añadir un toque de nobleza a tu hogar adoptando a este distinguido minino?</td>
+              </tr>
+              <tr>
+                <td><a href="./mascotas/gatos/hacato.html"><img src="../assets/imgs/hacato.jpg" height="100"></a></td>
+                <td>Hacato</td>
+                <td>Encantador gato hacker en busca de un hogar seguro. Con su ingenio felino y habilidades digitales, este compañero audaz está listo para proteger tus datos y acompañarte en todas tus aventuras cibernéticas. Adopta a este astuto minino y descubre un mundo de tecnología y afecto.</td>
+              </tr>
+              <tr>
+                <td><a href="./mascotas/gatos/nieve.html"><img src="../assets/imgs/nieve.jpg" height="100"></a></td>
+                <td>Nieve</td>
+                <td>Gato blanco aburrido busca hogar estimulante. Con su pelaje brillante y ojos soñadores, este felino anhela un compañero que pueda desafiar su mente y despertar su curiosidad. ¿Listo para ser el héroe de esta historia y darle al aburrimiento un final feliz?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-2"><img src="../assets/imgs/CatBanner02.png" width="100%"></div>
+      </div>
+    </div>
+    
   </body>
 </html>

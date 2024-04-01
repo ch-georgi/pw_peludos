@@ -64,3 +64,13 @@
 .avatar-miembros{
   border: #fb6d48 solid 5px;
 }
+
+.orange-gradient{
+  background-image:
+    linear-gradient(to top, rgba(168, 53, 0, 0.349), rgb(255, 99, 60));
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
+    ;
+
+}
