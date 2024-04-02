@@ -1,6 +1,11 @@
 #menu-principal {
   background-color: #fb6d48;
   color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .navbar-brand,
 .navbar-toggler,
@@ -9,7 +14,7 @@
   color: white;
 }
 .carousel-item {
-  height: 700px;
+  height: 90vh;
 }
 
 .carousel-item img {
@@ -45,9 +50,16 @@
   text-align: justify;
   min-height: 150px;
 }
+.miembros-info{
+  min-height: 300px;
+}
 
-.miembros-info a{
-  bottom:0;
+.miembros-info-btn a{
+  margin:auto;
+}
+
+.miembros-info-btn{
+  margin-bottom: 20px;
 }
 
 .info-grupo{
