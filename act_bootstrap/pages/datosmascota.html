@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,26 +22,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../../../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../../../apple-touch-icon.png"
+      href="../apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../../../favicon-32x32.png"
+      href="../favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../../../favicon-16x16.png"
+      href="../favicon-16x16.png"
     />
-    <link rel="manifest" href="../../../site.webmanifest" />
-    <link rel="mask-icon" href="../../../safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>Ayuda a un peludo</title>
@@ -67,10 +68,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="../../../index.html">Inicio</a>
+                <a class="nav-link" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../../contacto.html">Contacto</a>
+                <a class="nav-link" href="./contacto.html">Contacto</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -83,12 +84,12 @@
                   Peludos en adopción
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="../../perros.html">Perros</a></li>
+                  <li><a class="dropdown-item" href="./perros.html">Perros</a></li>
                   <li>
-                    <a class="dropdown-item" href="../../gatos.html">Gatos</a>
+                    <a class="dropdown-item" href="./gatos.html">Gatos</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../../otros.html">Otros</a>
+                    <a class="dropdown-item" href="./otros.html">Otros</a>
                   </li>
                 </ul>
               </li>
@@ -97,34 +98,57 @@
         </div>
       </nav>
     </header>
-      <div class="container-fluid row"> 
-          <div class="col-4">
-            <img src="../../../assets/imgs/pepe.jpg" width="100%">
-          </div>
-          <div class="col-8">
-            <p><b>Nombre:</b> Pepe 
-            <br><b>Especie:</b> Loro Gris
-            <br><b>Sexo:</b> Macho
-            <br><b>Edad:</b> 1 año
-            <br><b>Tamaño:</b> Pequeño
-            <br><b>Nivel de energía:</b> Medio
-            <br><b>Sociable con niños:</b> Sí
-            <br><b>Sociable con perros:</b> Sí
-            <br><b>Sociable con gatos:</b> Sí</p>
-
-          </div>
-      </div>
-        
-        
-        <p><b>Descripción de su personalidad:</b>  Pepe es un loro con una personalidad extrovertida y bulliciosa. Es muy sociable y le encanta interactuar con las personas y otros animales. Tiene una gran capacidad para imitar sonidos y voces, lo que lo hace muy entretenido y divertido. Pepe es curioso por naturaleza y siempre está explorando su entorno en busca de nuevas experiencias. A veces puede ser un poco testarudo y terco, especialmente cuando quiere atención o algo en particular. Sin embargo, su carisma y encanto hacen que sea difícil resistirse a su compañía. En resumen, Pepe es un loro alegre y encantador que ilumina cualquier ambiente con su presencia. </p>
+    <div class="container-fluid row" style="margin-top:70px"> 
+        <div class="col-4" id="imganimal">
           
-        <p><b>Información de Salud:</b> Pepe está en excelente estado de salud. Está vacunado y desparasitado. 
-          Pepe no requiere cuidados médicos específicos más allá de los chequeos rutinarios.
-          Se recomienda también inscribirlo en el Registro Nacional de Mascotas con su chip correspondiente, conforme a la legislación vigente.</p>
-            
-        <a class="d-grid gap-2 col-6 mx-auto" href="../../contacto.html"><button class="btn btn-success btn-primary" type="button">Lo Quiero Adoptar</button></a>
+        </div>
+        <div class="col-8">
+          <p id="datos-mascota"><b>Nombre:</b></p>
+        </div>
+    </div>
+    
+    <div class="container-fluid row" >
+      <p id="desc-personalidad"><b>Descripción de su personalidad:</b></p>
+      <p id="desc-salud"><b>Información de Salud:</b></p>
+    </div>
 
-                
-        
+    <a class="d-grid gap-2 col-6 mx-auto" href="./contacto.html"><button class="btn btn-success btn-primary" type="button">Lo Quiero Adoptar</button></a>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      function poblarTabla(){
+        $.getJSON("../assets/datos/mascotas.json",
+        // Cargar datos de mascota
+        function(data){
+            item = null
+            tipoanimal = searchParams.get('type')
+            idanimal = searchParams.get('id')
+            lista = null
+            if (tipoanimal == 'perro'){
+              lista = data.perros
+            } else if (tipoanimal == 'gato'){
+              lista = data.gatos
+            } else {
+              lista = data.otros
+            }
+            $.each(lista, function(index, item){
+              if (item.idmascota == idanimal){
+                $("#imganimal").append(`<img src="${item.imagen}" width="100%">`);
+                $("#datos-mascota").append(` ${item.nombre}`);
+                $.each(item.datos, function(ind, dato){
+                  $("#datos-mascota").append(`<br><b>${dato.dato}:</b> ${dato.valor}`);
+                });
+                $("#desc-personalidad").append(`${item.personalidad}`);
+                $("#desc-salud").append(`${item.salud}`);
+              }
+            })
+        })
+      }
+
+      $(document).ready(
+          poblarTabla()
+      );
+    </script>
   </body>
 </html>
